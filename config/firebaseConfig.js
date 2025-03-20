@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
-const firebaseConfig = process.env.fireBaseConfig;
+// Parse the Firebase configuration from the environment variable
+const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
